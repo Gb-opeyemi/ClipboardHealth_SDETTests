@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
 public class HomePage {
     private WebDriver driver;
 
@@ -14,17 +15,26 @@ public class HomePage {
         this.driver = driver;
     }
 
+
+    // Method to click on Hamburger Menu
     public void clickHamburgerMenu(){
-        driver.findElement(hamburgerMenu).click();
+        clickElement(hamburgerMenu);
     }
 
+    // Method to click on TV, Appliances and Electronics.
     public void clickTvAndElectronics(){
-        driver.findElement(tvandelectronics).click();
+        clickElement(tvandelectronics);
     }
 
+    // Method to click on Televisions
     public TelevisionsPage clickTelevisions(){
-        driver.findElement(televisions).click();
+        clickElement(televisions);
         return new TelevisionsPage(driver);
     }
 
+
+    //Helper Method to click on elements
+    private void clickElement(By element){
+        driver.findElement(element).click();
+    }
 }

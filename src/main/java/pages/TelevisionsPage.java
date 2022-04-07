@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class TelevisionsPage {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     public TelevisionsPage(WebDriver driver){
         this.driver = driver;
@@ -13,9 +13,16 @@ public class TelevisionsPage {
 
     private By brandSamsung = By.linkText("Samsung");
 
+
+    // Method to click on Samsung to filter results by Brand Samsung
     public SamsungPage clickSamsung(){
-        driver.findElement(brandSamsung).click();
+        clickElement(brandSamsung);
         return new SamsungPage(driver);
+    }
+
+    //Helper Method to click on elements
+    private void clickElement(By element){
+        driver.findElement(element).click();
     }
 
 }
