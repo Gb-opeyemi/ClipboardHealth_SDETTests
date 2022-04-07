@@ -14,13 +14,20 @@ public class SamsungPage {
         this.driver = driver;
     }
 
+    // Method to click on Filter button to show dropdown
     public void clickFilterResultsDropdown(){
-        driver.findElement(filterResultsDropdown).click();
+        clickElement(filterResultsDropdown);
     }
 
+    // Method to click on High to Low from dropdown
     public FilteredResultsPage clickFilterFromHighToLow(){
-        driver.findElement(filterFromHighToLow).click();
+        clickElement(filterFromHighToLow);
         return new FilteredResultsPage(driver);
     }
 
+
+    //Helper Method to click on elements
+    private void clickElement(By element){
+        driver.findElement(element).click();
+    }
 }

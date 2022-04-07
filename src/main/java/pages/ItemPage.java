@@ -13,11 +13,12 @@ public class ItemPage {
         this.driver = driver;
     }
 
-
+    // Method to Assert that “About this item” section is present
     public boolean assertAboutItemSection(){
       return driver.findElement(aboutItemSection).isDisplayed();
     }
 
+    // Method to print section text to console
     public void getAboutItemSectionText(){
         System.out.println(driver.findElement(aboutItemSection).getText());
     }

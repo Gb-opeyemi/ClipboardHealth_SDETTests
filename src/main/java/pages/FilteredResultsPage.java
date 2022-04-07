@@ -17,8 +17,9 @@ public class FilteredResultsPage {
         this.driver = driver;
     }
 
+    // Method to click on the Second-Highest Item and also switch the window
     public ItemPage clickSecondHighestItem(){
-        driver.findElement(secondHighestItem).click();
+        clickElement(secondHighestItem);
 
         //Switch to the new window
         String parent=driver.getWindowHandle();
@@ -37,6 +38,12 @@ public class FilteredResultsPage {
             }
         }
         return new ItemPage(driver);
+    }
+
+
+    //Helper Method to click on elements
+    private void clickElement(By element){
+        driver.findElement(element).click();
     }
 
 }
