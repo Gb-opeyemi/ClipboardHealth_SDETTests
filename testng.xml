@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/IdeaProjects/ClipboardHealth_SDETTest">
+        <parameter name="browser" value="remote"/>
+        <classes>
+            <class name="testsolution.TestSolution">
+            <methods><include name="testAmazonSite"/></methods>
+        </class>
+        </classes>
+    </test>
+</suite>
