@@ -9,7 +9,7 @@ import pages.TelevisionsPage;
 
 import static org.testng.Assert.assertEquals;
 
-public class TestSolution extends BaseTest {
+public class WebAutomation extends BaseTest {
 
     @Test
     public void testAmazonSite(){

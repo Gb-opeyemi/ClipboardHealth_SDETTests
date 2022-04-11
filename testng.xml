@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/IdeaProjects/ClipboardHealth_SDETTest">
-        <parameter name="browser" value="remote"/>
+<suite name="All Test Suite" >
+    <test verbose="2" preserve-order="true" name="Web Automation">
+        <!-- Pass the value for browser here; "remote" to run on Selenium Grid and "chrome" to run on local-->
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testsolution.TestSolution">
+            <class name="testsolution.WebAutomation">
             <methods><include name="testAmazonSite"/></methods>
         </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="API Automation">
+        <classes>
+            <class name="testsolution.ApiAutomation">
+                <methods><include name="createUserTest"/></methods>
+            </class>
         </classes>
     </test>
 </suite>
