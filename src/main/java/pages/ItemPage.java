@@ -19,8 +19,8 @@ public class ItemPage {
     }
 
     // Method to print section text to console
-    public void getAboutItemSectionText(){
-        System.out.println(driver.findElement(aboutItemSection).getText());
+    public String getAboutItemSectionText(){
+       return driver.findElement(aboutItemSection).getText();
     }
 
 }

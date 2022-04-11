@@ -1,6 +1,7 @@
 package testsolution;
 
 import base.BaseTest;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.FilteredResultsPage;
 import pages.ItemPage;
@@ -39,7 +40,9 @@ public class WebAutomation extends BaseTest {
         assertEquals(true, itemPage.assertAboutItemSection());
 
         // 9b. Log this section text to console/report.
-        itemPage.getAboutItemSectionText();
+        System.out.println(itemPage.getAboutItemSectionText());
+        Reporter.log(itemPage.getAboutItemSectionText());
+
     }
 
 }
